@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日日曆與自動提醒（Chrome 外掛）</title>
+<style>
+  body { margin: 0; background: #ffffff; color: #222222; font-family: -apple-system, "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", sans-serif; line-height: 1.7; }
+  main { max-width: 760px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 1.6rem; margin: 0 0 8px; }
+  h2 { font-size: 1.2rem; margin: 32px 0 8px; border-bottom: 1px solid #dddddd; padding-bottom: 4px; }
+  a { color: #0b57d0; }
+  ul { padding-left: 1.4em; }
+  li { margin: 4px 0; }
+  .note { color: #555555; font-size: 0.95rem; }
+  footer { margin-top: 40px; border-top: 1px solid #dddddd; padding-top: 12px; color: #555555; font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>每日日曆與自動提醒</h1>
+  <p class="note">Chrome 外掛（Chrome extension）</p>
+
+  <section lang="zh-Hant">
+    <h2>用途</h2>
+    <p>這是一個 Chrome 外掛，提供整頁月曆與側邊欄迷你月曆，讓使用者記錄每天的待辦事項，並在指定時間用 Chrome 通知提醒。使用者也可以選擇把資料同步到自己的其他電腦。</p>
+
+    <h2>主要功能</h2>
+    <ul>
+      <li>整頁月曆：星期一開頭、顯示 ISO 週數，每格同時顯示國曆與農曆，並標示節氣與台灣常見節日。</li>
+      <li>側邊欄迷你月曆：可直接新增、勾選、修改當天的事項。</li>
+      <li>待辦事項：每筆事項可填文字（最多 500 字）與提醒時間（選填），可標示完成。</li>
+      <li>自動提醒：每日總提醒（預設 09:00）與單筆事項到點提醒，使用 Chrome 通知。</li>
+      <li>自動清除：可選擇在事項通知或完成後滿指定天數自動刪除，也可以關閉。</li>
+      <li>跨裝置同步：可用 Chrome 內建同步，或選擇登入 Google，把資料存到自己雲端硬碟的應用程式專屬資料夾。</li>
+      <li>匯出與匯入：可把資料匯出成 JSON 檔備份，再匯入回來。</li>
+    </ul>
+
+    <h2>資料存放方式</h2>
+    <p>資料存放在使用者自己的瀏覽器、Chrome 同步（使用者自己的 Google 帳號），以及使用者選擇開啟時、自己 Google 雲端硬碟的應用程式專屬資料夾；開發者沒有自己的伺服器，不蒐集使用者的資料。詳見<a href="privacy.html">隱私權政策</a>。</p>
+
+    <p><a href="privacy.html">隱私權政策（Privacy Policy）</a></p>
+  </section>
+
+  <section lang="en">
+    <h2>About (English)</h2>
+    <p>"每日日曆與自動提醒" (Daily Calendar and Auto Reminders) is a Chrome extension with a full-page month calendar (including lunar dates, solar terms and Taiwan holidays) and a side-panel mini calendar. Users can keep daily to-do items and receive Chrome notifications at the times they set. Users may optionally sync their data across their own computers, either through Chrome's built-in sync or by signing in with Google so the data is stored in the application-specific folder (appDataFolder) of their own Google Drive.</p>
+    <p>The developer runs no server and does not collect user data. See the <a href="privacy.html">Privacy Policy</a>.</p>
+  </section>
+
+  <footer>
+    <a href="privacy.html">隱私權政策 / Privacy Policy</a>
+  </footer>
+</main>
+</body>
+</html>

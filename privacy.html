@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>隱私權政策 Privacy Policy｜每日日曆與自動提醒</title>
+<style>
+  body { margin: 0; background: #ffffff; color: #222222; font-family: -apple-system, "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", sans-serif; line-height: 1.7; }
+  main { max-width: 760px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 1.6rem; margin: 0 0 8px; }
+  h2 { font-size: 1.2rem; margin: 28px 0 8px; border-bottom: 1px solid #dddddd; padding-bottom: 4px; }
+  a { color: #0b57d0; }
+  ul { padding-left: 1.4em; }
+  li { margin: 4px 0; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+  th, td { border: 1px solid #cccccc; padding: 6px 8px; text-align: left; vertical-align: top; }
+  th { background: #f3f3f3; }
+  .note { color: #555555; font-size: 0.95rem; }
+  .todo { background: #fff3b0; padding: 0 4px; }
+  hr { border: 0; border-top: 2px solid #999999; margin: 48px 0 24px; }
+  code { background: #f3f3f3; padding: 0 3px; word-break: break-all; }
+  @media (max-width: 600px) { table { font-size: 0.85rem; } }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">回首頁 / Home</a>　｜　<a href="#en">Jump to English</a></p>
+
+  <section lang="zh-Hant" id="zh">
+    <h1>隱私權政策</h1>
+    <p class="note">適用對象：Chrome 外掛「每日日曆與自動提醒」（以下簡稱「本外掛」）<br>生效日期：2026-11-19</p>
+
+    <h2>1. 本外掛處理哪些資料</h2>
+    <p>本外掛處理的資料都是使用者自己輸入或設定的內容：</p>
+    <ul>
+      <li>待辦事項：事項文字、所屬日期、提醒時間（選填）、是否完成、是否已通知與通知時間、建立與修改時間。</li>
+      <li>設定：每日總提醒時間、自動清除的開關與天數。</li>
+      <li>刪除紀錄：為了讓多台電腦同步時不會把已刪除的事項加回來，本外掛會保留刪除紀錄（事項 id、日期、刪除時間），保留 30 天。</li>
+    </ul>
+    <p>本外掛不讀取使用者的電子郵件、姓名、聯絡人、雲端硬碟內的其他檔案，也不讀取瀏覽紀錄或網頁內容。</p>
+
+    <h2>2. 使用目的</h2>
+    <p>這些資料只用來提供外掛本身的功能：顯示月曆與待辦事項、依設定時間發出提醒通知，以及在使用者自己的多台電腦之間同步待辦事項與設定。</p>
+
+    <h2>3. 資料存放位置</h2>
+    <table>
+      <thead><tr><th>位置</th><th>內容</th><th>說明</th></tr></thead>
+      <tbody>
+        <tr><td>使用者的瀏覽器本機（<code>chrome.storage.local</code>）</td><td>全部資料</td><td>外掛運作的主要資料，一律存在這裡。</td></tr>
+        <tr><td>Chrome 同步（<code>chrome.storage.sync</code>）</td><td>設定、刪除紀錄、事項（容量有限時只放較近的日期）</td><td>預設開啟，可在外掛設定關閉。資料由 Chrome 存放在使用者自己的 Google 帳號；Chrome 本身是否有開同步，由使用者在 Chrome 設定控制。</td></tr>
+        <tr><td>使用者自己 Google 雲端硬碟的應用程式專屬資料夾（<code>appDataFolder</code>）</td><td>一個檔案 <code>calendar-data.json</code>，內容為全部事項、刪除紀錄與設定</td><td>預設關閉，使用者按「登入 Google」授權後才開啟。此資料夾只有本外掛讀寫得到，使用者在雲端硬碟畫面上看不到；本外掛無法讀取雲端硬碟中的其他檔案。</td></tr>
+      </tbody>
+    </table>
+    <p>另外，使用者可以自行把資料匯出成 JSON 檔，該檔案存在使用者自己選擇的位置，由使用者自行保管。</p>
+
+    <h2>4. 開發者不蒐集資料</h2>
+    <ul>
+      <li>開發者沒有自己的伺服器，本外掛不會把資料傳送到開發者或任何第三方的伺服器。</li>
+      <li>本外掛唯一連線的對象是 Google：用於 Google 雲端硬碟 API（<code>www.googleapis.com</code>）讀寫上述資料檔，以及登出時向 Google 撤銷授權（<code>oauth2.googleapis.com</code>）。這些連線只在使用者開啟並登入雲端硬碟同步後發生。Chrome 內建同步則由 Chrome 自行處理。</li>
+      <li>不蒐集、不販售、不出租資料，也不提供給第三方。</li>
+      <li>資料不用於廣告、行銷、使用者輪廓分析或信用評估。</li>
+      <li>本外掛沒有分析、追蹤或廣告程式碼，也不使用 Cookie。</li>
+    </ul>
+
+    <h2>5. Google 權限範圍與有限使用（Limited Use）聲明</h2>
+    <p>本外掛只要求一個 Google OAuth 範圍：<code>https://www.googleapis.com/auth/drive.appdata</code>（檢視及管理本外掛自己在雲端硬碟中的應用程式專屬資料）。此範圍不能存取使用者雲端硬碟中的其他檔案。</p>
+    <p>本外掛使用及轉移從 Google API 取得的資訊時，會遵守 <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>（Google API 服務使用者資料政策），包含有限使用（Limited Use）要求。具體來說：</p>
+    <ul>
+      <li>從 Google API 取得的資料只用於提供與改善使用者在外掛中看得到的功能（跨裝置同步待辦事項）。</li>
+      <li>不會把這些資料轉移給第三方，除非是為了提供上述功能。</li>
+      <li>不會把這些資料用於廣告，包含再行銷、個人化或興趣導向廣告。</li>
+      <li>不會讓人員讀取這些資料。開發者沒有伺服器，無法取得使用者存放在自己雲端硬碟的資料。</li>
+    </ul>
+
+    <h2>6. 使用者如何刪除資料與撤銷授權</h2>
+    <p>以下畫面用語可能因版本不同而有出入，請以實際畫面為準。</p>
+    <ul>
+      <li>刪除本機資料：在 <code>chrome://extensions</code> 移除本外掛，Chrome 會一併移除外掛存放在瀏覽器裡的資料；也可以在外掛內刪除單筆事項，或使用自動清除。</li>
+      <li>停止雲端硬碟同步：在外掛設定的「Google 雲端硬碟」按「登出」。登出會清除這台電腦保存的授權並嘗試向 Google 撤銷；雲端上的 <code>calendar-data.json</code> 會保留，不會因登出而刪除。</li>
+      <li>撤銷授權：到 Google 帳戶的「第三方應用程式與服務」（third-party apps &amp; services）存取權頁面，找到本外掛並移除存取權。</li>
+      <li>刪除雲端硬碟中的資料檔：到 Google 雲端硬碟設定的「管理應用程式」（Manage apps），找到本外掛，選擇刪除隱藏的應用程式資料。</li>
+      <li>Chrome 同步的資料：由 Chrome 儲存在使用者的 Google 帳號，可在 Chrome 的同步設定管理，或在外掛設定關閉「跨裝置同步」。</li>
+    </ul>
+
+    <h2>7. 資料保留</h2>
+    <p>資料保留多久由使用者自己控制。本外掛預設開啟「自動清除」：已通知或已完成的事項，滿設定天數（預設 7 天，可設 1 到 365 天）後自動刪除；使用者可以關閉自動清除，也可以隨時手動刪除事項。未完成且從未通知過的事項不會被自動刪除。刪除紀錄保留 30 天後移除。雲端硬碟上的資料檔會一直保留，直到使用者依第 6 節自行刪除。</p>
+
+    <h2>8. 兒童</h2>
+    <p>本外掛不是針對兒童設計，也不會刻意蒐集兒童的資料。</p>
+
+    <h2>9. 政策變更</h2>
+    <p>如果本政策有修改，會更新本頁內容並更改上方的生效日期。</p>
+
+    <h2>10. 聯絡方式</h2>
+    <p>對本政策有疑問，請聯絡：<span class="todo">loddyloce@gmail.com</span></p>
+  </section>
+
+  <hr>
+
+  <section lang="en" id="en">
+    <h1>Privacy Policy</h1>
+    <p class="note">Applies to: the Chrome extension "每日日曆與自動提醒" (Daily Calendar and Auto Reminders) (the "Extension")<br>Effective date: 2026-11-19</p>
+
+    <h2>1. Data the Extension handles</h2>
+    <p>All data handled by the Extension is content that the user enters or configures:</p>
+    <ul>
+      <li>To-do items: item text, date, optional reminder time, completion status, notification status and time, and creation and modification times.</li>
+      <li>Settings: the daily reminder time, and the auto-clean switch and number of days.</li>
+      <li>Deletion records: so that deleted items are not added back when several computers sync, the Extension keeps deletion records (item id, date, deletion time) for 30 days.</li>
+    </ul>
+    <p>The Extension does not read the user's email address, name, contacts, other files in Google Drive, browsing history or web page content.</p>
+
+    <h2>2. Purpose</h2>
+    <p>The data is used only to provide the Extension's own functions: showing the calendar and to-do items, sending reminder notifications at the configured times, and syncing to-do items and settings between the user's own computers.</p>
+
+    <h2>3. Where data is stored</h2>
+    <table>
+      <thead><tr><th>Location</th><th>Content</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>The user's browser (<code>chrome.storage.local</code>)</td><td>All data</td><td>The primary storage the Extension works from.</td></tr>
+        <tr><td>Chrome Sync (<code>chrome.storage.sync</code>)</td><td>Settings, deletion records, and items (only more recent dates when space is limited)</td><td>On by default and can be turned off in the Extension's settings. Chrome stores this data in the user's own Google account; whether Chrome Sync itself is enabled is controlled by the user in Chrome settings.</td></tr>
+        <tr><td>The application-specific folder (<code>appDataFolder</code>) of the user's own Google Drive</td><td>One file, <code>calendar-data.json</code>, containing all items, deletion records and settings</td><td>Off by default; turned on only after the user clicks "Sign in with Google" and grants access. Only this Extension can read or write this folder, and it is not visible in the Drive interface. The Extension cannot read any other file in the user's Google Drive.</td></tr>
+      </tbody>
+    </table>
+    <p>The user can also export the data to a JSON file. That file is saved at a location the user chooses and is kept by the user.</p>
+
+    <h2>4. The developer does not collect data</h2>
+    <ul>
+      <li>The developer runs no server. The Extension does not send data to the developer or to any third-party server.</li>
+      <li>The only party the Extension connects to is Google: the Google Drive API (<code>www.googleapis.com</code>) to read and write the data file described above, and Google's endpoint (<code>oauth2.googleapis.com</code>) to revoke authorization when the user signs out. These connections happen only after the user turns on Google Drive sync and signs in. Chrome Sync is handled by Chrome itself.</li>
+      <li>Data is not collected, sold or rented, and is not provided to third parties.</li>
+      <li>Data is not used for advertising, marketing, user profiling or credit evaluation.</li>
+      <li>The Extension contains no analytics, tracking or advertising code and does not use cookies.</li>
+    </ul>
+
+    <h2>5. Google OAuth scope and Limited Use disclosure</h2>
+    <p>The Extension requests a single Google OAuth scope: <code>https://www.googleapis.com/auth/drive.appdata</code> (view and manage the Extension's own application data in Google Drive). This scope does not allow access to any other file in the user's Google Drive.</p>
+    <p>The Extension's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. Specifically:</p>
+    <ul>
+      <li>Data obtained from Google APIs is used only to provide the user-facing features of the Extension (syncing to-do items across the user's computers).</li>
+      <li>The data is not transferred to third parties except as needed to provide those features.</li>
+      <li>The data is not used for advertising, including retargeting, personalized or interest-based advertising.</li>
+      <li>No humans read the data. The developer has no server and cannot access data the user stores in their own Google Drive.</li>
+    </ul>
+
+    <h2>6. How to delete data and revoke access</h2>
+    <p>Wording on screen may differ between versions; follow what is actually shown.</p>
+    <ul>
+      <li>Local data: remove the Extension at <code>chrome://extensions</code>; Chrome also removes the data the Extension keeps in the browser. You can also delete individual items inside the Extension, or use auto-clean.</li>
+      <li>Stop Google Drive sync: in the Extension's settings, under "Google Drive" (Google 雲端硬碟), click the sign-out button (登出). Signing out clears the authorization held on this computer and attempts to revoke it with Google. The <code>calendar-data.json</code> file in Google Drive is kept and is not deleted by signing out.</li>
+      <li>Revoke access: open the third-party apps &amp; services access page of your Google Account, find the Extension, and remove its access.</li>
+      <li>Delete the data file in Google Drive: open "Manage apps" in Google Drive settings, find the Extension, and choose to delete the hidden app data.</li>
+      <li>Chrome Sync data: stored by Chrome in the user's Google account; manage it in Chrome's sync settings, or turn off "cross-device sync" in the Extension's settings.</li>
+    </ul>
+
+    <h2>7. Data retention</h2>
+    <p>The user controls how long data is kept. Auto-clean is on by default: items that have been notified or marked done are deleted after the configured number of days (default 7, configurable from 1 to 365). The user can turn auto-clean off and can delete items manually at any time. Items that are incomplete and have never been notified are not deleted automatically. Deletion records are removed after 30 days. The data file in Google Drive is kept until the user deletes it as described in section 6.</p>
+
+    <h2>8. Children</h2>
+    <p>The Extension is not designed for children and does not knowingly collect data from children.</p>
+
+    <h2>9. Changes to this policy</h2>
+    <p>If this policy changes, this page will be updated and the effective date above will be changed.</p>
+
+    <h2>10. Contact</h2>
+    <p>For questions about this policy, contact: <span class="todo">loddyloce@gmail.com</span></p>
+  </section>
+
+  <p style="margin-top:40px"><a href="index.html">回首頁 / Home</a></p>
+</main>
+</body>
+</html>
